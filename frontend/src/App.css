@@ -1,0 +1,199 @@
+/* App.css */
+:root{
+--primary: #6366f1;
+--primary-hover: #4f46e5;
+--bg: #f8fafc;
+--card-bg: #ffffff;
+--text-main: #1e293b;
+--text-muted: #64748b;
+--danger: #ef4444;
+--success: #22c55e;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ min-height: 100vh;
+ padding-top:80px;
+
+}
+
+.app-container {
+  width: 100%;
+  max-width: 450px;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+
+/* Input Area */
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.add-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.add-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #f1f5f9;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.task-text {
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+/* Custom Checkbox */
+.check-icon {
+  color: #cbd5e1;
+  font-size: 1.2rem;
+}
+
+.check-icon.completed {
+  color: var(--success);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: transparent;
+  color: #94a3b8;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 5px;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: var(--danger);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* Container for the task row */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #ffffff;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Modern Delete Button */
+.delete-btn-modern {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  background-color: #fee2e2; /* Light red background */
+  color: #ef4444; /* Bright red text/icon */
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.delete-btn-modern i {
+  font-size: 14px;
+}
+
+.delete-btn-modern:hover {
+  background-color: #ef4444; /* Changes to solid red on hover */
+  color: white;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.delete-btn-modern:active {
+  transform: translateY(0);
+}
